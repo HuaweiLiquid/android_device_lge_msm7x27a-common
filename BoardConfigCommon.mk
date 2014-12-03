@@ -23,6 +23,13 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
+# The proprietary variant sets USE_CAMERA_STUB := false, this way
+# we use the camera stub when the vendor tree isn't present, and
+# the true camera library when the vendor tree is available.
+USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
 -include vendor/lge/msm7x27a-common/BoardConfigVendor.mk
