@@ -72,12 +72,10 @@ PRODUCT_COPY_FILES += \
 
 # display HALS
 PRODUCT_PACKAGES += \
-    libgenlock \
-    gralloc.msm7x27a \
     copybit.msm7x27a \
-    libqdMetaData \
-    memtrack.msm7x27a \
-    hwcomposer.msm7x27a
+    gralloc.msm7x27a \
+    hwcomposer.msm7x27a \
+    libtilerenderer
 
 # off-mode charging
 PRODUCT_PACKAGES += \
@@ -88,20 +86,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore \
-    libstagefrighthw \
-    libdashplayer
+    libstagefrighthw
+
+PRODUCT_PACKAGES += \
+    librs_jni \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers
 
 # Gps hal
 PRODUCT_PACKAGES += \
     gps.msm7x27a
-
-# Power Hal
-PRODUCT_PACKAGES += \
-    power.msm7x27a
-
-# Camera Hal
-PRODUCT_PACKAGES += \
-    camera.msm7x27a
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -115,11 +110,11 @@ PRODUCT_PACKAGES += \
 
 # audio 
 PRODUCT_PACKAGES += \
-    libaudioutils \
     audio.a2dp.default \
-    audio.usb.default \
     audio.primary.msm7x27a \
+    audio.usb.default \
     audio_policy.msm7x27a \
+    libaudioutils \
     libaudio-resampler
 
 # light hal
@@ -161,13 +156,13 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES += \
-   media.stagefright.enable-player=true \
-   media.stagefright.enable-meta=false \
-   media.stagefright.enable-scan=true \
-   media.stagefright.enable-http=true \
-   media.stagefright.enable-fma2dp=true \
-   media.stagefright.enable-aac=true \
-   media.stagefright.enable-qcp=true
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-meta=false \
+    media.stagefright.enable-scan=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-qcp=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
